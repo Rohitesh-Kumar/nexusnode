@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --prim: #000000;
+    --sec: #150050;
+    --acc: #3F0071;
+    --tone: #FB2576;
+}
+
+/* general  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.main_con{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* hero  */
+
+.hero{
+    width: 100%;
+    height: 92%;
+    display: flex;
+}
+.right_con{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.right_con img{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: -50px;
+}
+.left_con{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.txt_con{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.txt_con h1{
+    font-size: 50px;
+    font-weight: 800;
+}
+.txt_con .detail{
+    font-size: 16px;
+    color: grey;
+    margin: 5px 0 20px 5px;
+}
+.txt_con .intro{
+    font-size: 15px;
+    margin: 10px 0 20px 0;
+    width: 80%;
+}
+.learn{
+    margin: 20px;
+    padding: 10px;
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: white;
+    transition: .3s ease-in-out;;
+    font-weight: 500;
+}
+.learn:hover{
+    background: black;
+    color: white;
+}
+
+/* review  */
+
+.review_con{
+    width:80%;
+    height: 50vh;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: hidden;
+    position: relative;
+}
+.review_con::before,
+.review_con::after{
+    position: absolute;
+    content: '';
+    width: 10%;
+    height: 100%;
+    z-index: 1;
+}
+.review_con::before{
+    left: 0;
+    background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+}
+.review_con::after{
+    right: 0;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0));
+}
+.review_head{
+    width: 100%;
+    text-align: center;
+}
+.review_head h4{
+    font-size: 25px;
+    color: #FB2576;
+    font-weight: 500;
+}
+.review_head h4 span{
+    background: -webkit-linear-gradient(left, rgb(204, 204, 0), rgb(255, 102, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.review_slider{
+    width: 100%;
+    height: 80%;
+    margin-top: 50px;
+    animation: 45s review infinite linear;
+}
+.review_slider:hover{
+    animation-play-state: paused;
+}
+@keyframes review{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: translateX(-80%);
+    }
+    75%{
+        transform: translateX(-25%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.review_con1{
+    display: inline-block;
+    width: 500px;
+    margin: 50px 50px 0 50px;
+    text-align: center;
+}
+.review_con1 img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #FB2576;
+    border-radius: 50%;
+}
+.review_con1 .name{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.review_con1 .position{
+    font-size: 15px;
+    color: grey;
+    text-wrap: wrap;
+}
+.review_con1 .rateing{
+    font-size: 15px;
+    color: gold;
+    margin: 10px;
+}
+.review_con1 .coment{
+    font-size: 14px;
+    color: black;
+    text-wrap: wrap;
+}
+/* logo slider  */
+
+.logoslide_con{
+    width: 100%;
+    height: 200px;
+    margin: 100px 0px;
+}
+.header_logoslide{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+.header_logoslide h5{
+    font-size: 30px;
+    color: #150050;
+}
+.logos{
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slider{
+    display: inline-block;
+    animation: 30s logoslide infinite linear;
+}
+.slider img{
+    height: 100px;
+    margin: 0 50px ;
+}
+@keyframes logoslide{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* Service Container  */
+
+.services{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    background: rgb(179, 193, 255);
+    color: rgb(0, 0, 0);
+    padding: 50px 0;
+}
+.serhead{
+    margin: 0px 0px 20px 0px;
+    font-size: 18px;
+    width: 80%;
+    height: 10%;
+    text-align: center;
+}
+.ser_con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+}
+.serv_con{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ser_con_header{
+    width: 100%;
+    height: 100%;
+}
+.bullet h4{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px 0px 10px 0px;
+}
+.bullet img{
+    width: 20px;
+    margin: 20px;
+}
+.ser_con_header .detail{
+    color: grey;
+    font-size: 15px;
+    margin: 0px 0px 20px 0px;
+}
+.ser_con_header .info{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 50px 0px 50px 5px;
+}
+.btn_con2 .learn{
+    padding: 5px;
+    height: 30px;
+}
+.btn_con2 .Getstart{
+    padding: 5px;
+    height: 30px;
+}
+/* email subs */
+
+.email_sec{
+    width: 100%;
+    height: 30vh;
+    padding: 150px 0 200px 0;
+    text-align: center;
+    position: relative;
+}
+.email_sec::before{
+    width: 100%;
+    position: absolute;
+    content: '';
+    background: rgb(179, 193, 255);
+    left: 0;
+    top: 50px;
+    height: 10px;
+}
+.email-head{
+    font-size: 30px;
+    font-weight: 600;
+    color: #150050;
+    margin: 20px 0 10px 0;
+}
+.email_txt{
+    width: 50%;
+    font-size: 15px;
+    color: #3F0071;
+    font-weight: 400;
+    margin: 0 0 20px 25%;
+}
+.email_sec form input{
+    width: 40%;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid #150050;
+    padding-left: 20px;
+}
+.email_sec form{
+    margin: 50px 0;
+}
+.email_sec form .emailBtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    background: #FB2576;
+    color: white;
+    margin-left: 20px;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+.email_sec form .emailBtn:hover{
+    background: white;
+    color: #FB2576;
+    border: 1px solid #FB2576;
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --prim: #000000;
+    --sec: #150050;
+    --acc: #3F0071;
+    --tone: #FB2576;
+}
+
+/* general  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* header  */
+
+header{
+    width: 100%;
+    height: 8%;
+    display: flex;
+}
+.logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 40%;
+}
+.menu{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+    font-size: 13px;
+}
+.menu ul li{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+    transition: .3s ease-in-out;
+    padding: 5px;
+    margin: 0px 10px;
+}
+.menu ul li a:hover{
+    color: #FB2576;
+}
+.menu ul li a:after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    border: 0px solid #FB2576;
+    border-radius: 20px;
+    left: 0;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #FB2576;
+}
+.contact{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Getstart{
+    font-family: "Poppins", sans-serif;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0px;
+    background: var(--tone);
+    font-weight: 500;
+    color: white;
+    transition: .3s ease-in-out;
+}
+.Getstart:hover{
+    background: white;
+    color: #FB2576;
+    border: 1px solid #FB2576;
+}
+
+/* FOOTER  */
+
+footer{
+    background: black;
+    width: 100vw;
+    height: 50vh;
+    margin-top: 100px;
+    font-family: "Poppins", sans-serif;
+}
+.footer_head{
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.footer_head img{
+    width: 250px;
+    margin: 0px 0px 0px 35px;
+}
+.mid-foot_con{
+    width: 80%;
+    margin: auto;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_left{
+    width: 40%;
+    height: 90%;
+    margin: 13px;
+}
+.txt_con2{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.location{
+    color: white;
+    font-size: 20px;
+    margin: 0px 0px 20px -5px;
+}
+.txt_con2 a{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(148, 148, 148);
+    transition: .2s ease-in-out;
+}
+.txt_con2 a:hover{
+    color: #FB2576;
+}
+.links{
+    margin: 40px 0px;
+}
+.terms{
+    padding: 0px 20px 0px 0px;
+}
+.privacy{
+    margin: 0px 0px 0px 20px;
+}
+.footer_right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.list{
+    width: 30%;
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px 10px 0px 30px;
+}
+.list ul{
+    position: relative;
+}
+.list ul li{
+    list-style: none;
+    padding: 10px;
+}
+.list ul li a{
+    text-decoration: none;
+    color: grey;
+    transition: .2s ease-in-out;
+}
+.list ul li a:hover{
+    color: #FB2576;
+}
+.topCroll{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -50px;
+    bottom: 50px;
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.topCroll i{
+    color: white;
+    font-size: 20px;
+}
+.copy{
+    width: 100vw;
+    height: 5vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy p{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.copy p img{
+    width: 20px;
+    margin-inline-end: 10px;
+}
